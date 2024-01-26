@@ -226,13 +226,16 @@
         android:background="@color/white">
 
         <Button
+            android:id="@+id/btnMicro"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_margin="10dp"
             android:background="@drawable/logomicro"
             android:scaleType="fitCenter"
             android:layout_gravity="left"/>
+
         <ImageButton
+            android:id="@+id/btnDesplegable"
             android:layout_width="23dp"
             android:layout_height="23dp"
             android:layout_gravity="right"
