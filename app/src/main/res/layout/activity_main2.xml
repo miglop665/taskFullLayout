@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/azuloscuro"
+        app:title="Tiempo"
+        app:titleTextColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grisfondo"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <ImageButton
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_margin="25dp"
+            android:background="@drawable/nubestiempo"
+            android:scaleType="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="72ºF"
+            android:textSize="50dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cloudy"
+            android:textSize="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <ImageButton
+            android:id="@+id/botonVolver"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:background="@drawable/borde_redondeado3"
+            android:src="@drawable/flechavolveratras"
+            android:scaleType="centerInside"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>
