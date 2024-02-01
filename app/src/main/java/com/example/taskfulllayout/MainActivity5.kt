@@ -15,7 +15,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.coroutines.launch
 
-class MainActivity5 : AppCompatActivity(), OnMapReadyCallback {
+class MainActivity5 : AppCompatActivity() /* OnMapReadyCallback*/ {
 
     private lateinit var volver: ImageButton
     private val locationService: LocationService = LocationService()
@@ -31,7 +31,7 @@ class MainActivity5 : AppCompatActivity(), OnMapReadyCallback {
         volver = findViewById(R.id.botonVolver)
         mapView = findViewById(R.id.mapView)
         mapView.onCreate(savedInstanceState)
-        mapView.getMapAsync(this)
+        //mapView.getMapAsync(this)
 
         lifecycleScope.launch {
             userLocation = locationService.getUserLocation(this@MainActivity5)
@@ -43,7 +43,7 @@ class MainActivity5 : AppCompatActivity(), OnMapReadyCallback {
             startActivity(intent)
         }
     }
-
+/*
     override fun onMapReady(googleMap: GoogleMap) {
         Log.d(TAG, "Creacion del mapa")
         // Asegúrate de tener los permisos necesarios para acceder a la ubicación
@@ -72,5 +72,5 @@ class MainActivity5 : AppCompatActivity(), OnMapReadyCallback {
     override fun onLowMemory() {
         super.onLowMemory()
         mapView.onLowMemory()
-    }
+    }*/
 }
