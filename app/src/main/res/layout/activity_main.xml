@@ -35,7 +35,8 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:background="@drawable/logogoogleassistant"
-                    android:scaleType="center"/>
+                    android:scaleType="center"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
                 <Button
                     android:id="@+id/botonTiempo"
@@ -44,7 +45,8 @@
                     android:layout_alignParentTop="true"
                     android:layout_toLeftOf="@id/txvTiempo"
                     android:background="@drawable/nubestiempo"
-                    android:scaleType="center"/>
+                    android:scaleType="center"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
                 <TextView
                     android:id="@+id/txvTiempo"
                     android:layout_width="wrap_content"
@@ -85,12 +87,12 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginLeft="20dp"
-                        android:background="@drawable/borde_redondeado"
-                        android:src="@drawable/ubicacionlogo"
-                        android:scaleType="centerInside"
                         android:adjustViewBounds="true"
+                        android:background="@drawable/borde_redondeado"
                         android:padding="25dp"
-                        />
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ubicacionlogo"
+                        tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -110,12 +112,12 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginLeft="20dp"
-                        android:background="@drawable/borde_redondeado"
-                        android:src="@drawable/telefonologo2"
-                        android:scaleType="centerInside"
                         android:adjustViewBounds="true"
+                        android:background="@drawable/borde_redondeado"
                         android:padding="25dp"
-                        />
+                        android:scaleType="centerInside"
+                        android:src="@drawable/telefonologo2"
+                        tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -136,12 +138,12 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginLeft="20dp"
-                        android:background="@drawable/borde_redondeado"
-                        android:src="@drawable/logoplaylist"
-                        android:scaleType="centerInside"
                         android:adjustViewBounds="true"
+                        android:background="@drawable/borde_redondeado"
                         android:padding="25dp"
-                        />
+                        android:scaleType="centerInside"
+                        android:src="@drawable/logoplaylist"
+                        tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -164,10 +166,11 @@
                     android:id="@+id/botonImagen"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:src="@drawable/fotoperfilnoti"
-                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
                     android:backgroundTint="@color/grisfondo"
-                    android:adjustViewBounds="true"/>
+                    android:scaleType="centerInside"
+                    android:src="@drawable/fotoperfilnoti"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -183,33 +186,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="95dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/borde_redondeado"
-                android:src="@drawable/flechasuelologo"
-                android:scaleType="fitStart"
                 android:adjustViewBounds="true"
-                android:padding="25dp"/>
+                android:background="@drawable/borde_redondeado"
+                android:padding="25dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/flechasuelologo"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
                 android:id="@+id/boton2"
                 android:layout_width="match_parent"
                 android:layout_height="95dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/borde_redondeado"
-                android:src="@drawable/fotoperfil"
-                android:scaleType="fitStart"
                 android:adjustViewBounds="true"
-                android:padding="18dp"/>
+                android:background="@drawable/borde_redondeado"
+                android:padding="18dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/fotoperfil"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
                 android:id="@+id/boton3"
                 android:layout_width="match_parent"
                 android:layout_height="95dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/borde_redondeado"
-                android:src="@drawable/playlogonoti"
-                android:scaleType="fitStart"
                 android:adjustViewBounds="true"
-                android:padding="25dp"/>
+                android:background="@drawable/borde_redondeado"
+                android:padding="25dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/playlogonoti"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <Space
                 android:layout_width="match_parent"
@@ -223,16 +229,20 @@
         android:layout_width="match_parent"
         android:layout_height="68dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:visibility="visible"
+        >
 
         <Button
             android:id="@+id/btnMicro"
             android:layout_width="45dp"
             android:layout_height="45dp"
+            android:layout_gravity="left"
             android:layout_margin="10dp"
             android:background="@drawable/logomicro"
             android:scaleType="fitCenter"
-            android:layout_gravity="left"/>
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+            android:visibility="visible"/>
 
         <ImageButton
             android:id="@+id/btnDesplegable"
@@ -241,8 +251,63 @@
             android:layout_gravity="right"
             android:layout_margin="25dp"
             android:background="@drawable/borde_redondeado2"
-            android:src="@drawable/logoflecha"
+            android:padding="2dp"
             android:scaleType="centerInside"
-            android:padding="2dp"/>
+            android:src="@drawable/logoflecha"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+            android:visibility="visible"/>
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <LinearLayout
+        android:id="@+id/desplegado"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@color/white"
+        android:layout_marginTop="290dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation2"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            app:elevation="0dp">
+
+            <Button
+                android:id="@+id/btnMicro2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:background="@drawable/logomicro"
+                android:scaleType="fitCenter"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/btnDesplegable2"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="right"
+                android:layout_margin="25dp"
+                android:background="@drawable/borde_redondeado2"
+                android:padding="2dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/logoflecha"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        <ImageView
+            android:id="@+id/gifImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dancing_duck_acegifcom_29"
+            android:layout_centerInParent="true"/>
+
+
+    </LinearLayout>
+
+
+
 </RelativeLayout>
