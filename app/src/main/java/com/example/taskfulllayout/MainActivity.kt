@@ -13,6 +13,7 @@ import android.widget.Toast
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
+    //DECLARION DE VARIABLES
     private val REQ_CODE = 100
     private lateinit var tiempo: Button
     private lateinit var perfil: ImageButton
@@ -33,6 +34,8 @@ class MainActivity : AppCompatActivity() {
     var flag:Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
 
+
+        //ASIGNACION CON LOS ELEMENTOS DEL LAYOUT
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         tiempo=findViewById(R.id.botonTiempo)
@@ -47,29 +50,32 @@ class MainActivity : AppCompatActivity() {
         btnDesplegable2=findViewById(R.id.btnDesplegable2)
         botonNavigate=findViewById(R.id.botonNavigate)
 
-
+        //UTILIDAD DEL BOTON TIEMPO
         tiempo.setOnClickListener {
             val intent = Intent(this@MainActivity,MainActivity2::class.java)
             startActivity(intent)
         }
 
+        //UTILIDAD DEL BOTON DEL PERFIL
         perfil.setOnClickListener {
             val intent = Intent(this@MainActivity,MainActivity3::class.java)
             startActivity(intent)
         }
 
+        //UTILIDAD DEL BOTON DEL LLAMAR
         llamar.setOnClickListener {
             val intent = Intent(this@MainActivity,MainActivity4::class.java)
             startActivity(intent)
         }
 
+        //UTILIDAD DEL BOTON NAVIGATE
         botonNavigate.setOnClickListener {
             val intent = Intent(this@MainActivity,MainActivity5::class.java)
             startActivity(intent)
         }
 
+        //UTILIDAD DEL BOTON DEL MICRO
         btnMicro.setOnClickListener {
-
             val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
             intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
             intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault())
@@ -83,6 +89,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        //UTILIDAD DEL BOTON  DE GOOGLE
         botonGoogle.setOnClickListener {
 
             val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
@@ -98,11 +105,14 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        //UTILIDAD DEL DESPLEGABLE
         btnDesplegable.setOnClickListener {
             if (bottom_navigation.visibility == View.VISIBLE) { bottom_navigation.visibility = View.GONE }
             if (desplegado.visibility == View.GONE) { desplegado.visibility = View.VISIBLE }
 
         }
+
+        //UTILIDAD DEL DESPLEGABLE 2
         btnDesplegable2.setOnClickListener {
             if (bottom_navigation.visibility == View.GONE) { bottom_navigation.visibility = View.VISIBLE }
             if (desplegado.visibility == View.VISIBLE) { desplegado.visibility = View.GONE }
@@ -110,7 +120,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
+        //UTILIDAD DE LA MUSICA
         listamusica.setOnClickListener {
             var arrayCanciones = arrayOf(R.raw.cancion1,R.raw.cancion2,R.raw.cancion3)
             mp1= MediaPlayer.create(this, arrayCanciones[0])
@@ -130,6 +140,8 @@ class MainActivity : AppCompatActivity() {
             mp.start()
         }
     }
+
+    //FUNCIONALIDAD DEL SPEECH TO TEXT
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQ_CODE && resultCode == RESULT_OK){
