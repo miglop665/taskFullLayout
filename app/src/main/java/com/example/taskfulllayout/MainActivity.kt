@@ -20,17 +20,16 @@ class MainActivity : AppCompatActivity() {
     private lateinit var llamar: ImageButton
     private lateinit var bottom_navigation: View
     private lateinit var desplegado: View
-
-
     private lateinit var btnDesplegable: ImageButton
     private lateinit var btnDesplegable2: ImageButton
-
+    private lateinit var botonNavigate: ImageButton
     private lateinit var btnMicro: Button
     private lateinit var botonGoogle: Button
     private lateinit var mp: MediaPlayer
     private lateinit var mp1: MediaPlayer
     private lateinit var mp2: MediaPlayer
     private lateinit var mp3: MediaPlayer
+
     var flag:Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -46,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         desplegado=findViewById(R.id.desplegado)
         btnDesplegable=findViewById(R.id.btnDesplegable)
         btnDesplegable2=findViewById(R.id.btnDesplegable2)
+        botonNavigate=findViewById(R.id.botonNavigate)
 
 
         tiempo.setOnClickListener {
@@ -60,6 +60,11 @@ class MainActivity : AppCompatActivity() {
 
         llamar.setOnClickListener {
             val intent = Intent(this@MainActivity,MainActivity4::class.java)
+            startActivity(intent)
+        }
+
+        botonNavigate.setOnClickListener {
+            val intent = Intent(this@MainActivity,MainActivity5::class.java)
             startActivity(intent)
         }
 
