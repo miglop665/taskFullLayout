@@ -5,6 +5,7 @@ import android.location.Location
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -15,11 +16,12 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.coroutines.launch
 
-class MainActivity5 : AppCompatActivity(), OnMapReadyCallback {
+class MainActivity5 : AppCompatActivity(),  OnMapReadyCallback {
 
     private lateinit var volver: ImageButton
     private val locationService: LocationService = LocationService()
     private lateinit var mapView: MapView
+    private lateinit var text: TextView
     private var userLocation: Location? = null
     private val TAG = "LoginActivity"
 
@@ -30,12 +32,15 @@ class MainActivity5 : AppCompatActivity(), OnMapReadyCallback {
 
         volver = findViewById(R.id.botonVolver)
         mapView = findViewById(R.id.mapView)
+        text = findViewById(R.id.text)
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync(this)
 
-        lifecycleScope.launch {
-            userLocation = locationService.getUserLocation(this@MainActivity5)
-
+        lifecycleScope.launch{
+            val result: Location? = locationService.getUserLocation(this@MainActivity5)
+            if(result != null){
+                text.text = "Latitud ${result.latitude} y longitud ${result.longitude}"
+            }
         }
 
         volver.setOnClickListener {
