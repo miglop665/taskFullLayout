@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">taskFullLayout</string>
+    <string name="tiempo">Cloudy 72º</string>
+    <string name="textoPrincipal1">Good morning!</string>
+    <string name="textoPrincipal2">Light traffic ahead.</string>
+    <string name="textoBotonNavegar">Navigate</string>
+    <string name="textoBotonCall">Make a Call</string>
+    <string name="textoBotonPlay">Play</string>
+    <string name="textoPerfilFlotante">Just for you</string>
+    <string name="noti1texto1">12 min</string>
+    <string name="noti1texto3">via US 101 South</string>
+    <string name="noti2texto1">Thomas Williams</string>
+    <string name="noti2texto2">Missed call</string>
+    <string name="noti3texto1">Little Manila</string>
+    <string name="noti3texto2">Long Distance</string>
+    <string name="textotiempoactivity2">72ºF</string>
+    <string name="textotiempoactivity22">Cloudy</string>
+    <string name="textoactivity31">Info:</string>
+    <string name="textoactivity32">Nombre: Antonio</string>
+    <string name="textoactivity33">Apellidos: Cózar Moreno</string>
+    <string name="textoactivity34">Edad: 45</string>
+    <string name="telefonoboton9">9</string>
+    <string name="telefonoboton8">8</string>
+    <string name="telefonoboton7">7</string>
+    <string name="telefonoboton6">6</string>
+    <string name="telefonoboton5">5</string>
+    <string name="telefonoboton4">4</string>
+    <string name="telefonoboton3">3</string>
+    <string name="telefonoboton2">2</string>
+    <string name="telefonoboton1">1</string>
+    <string name="telefonoboton0">0</string>
 </resources>
