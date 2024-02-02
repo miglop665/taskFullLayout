@@ -67,7 +67,7 @@ class MainActivity5 : AppCompatActivity()/*,  OnMapReadyCallback*/ {
             googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLatLng, 15f))
         }
     }
-/*
+
     override fun onResume() {
         super.onResume()
         mapView.onResume()
